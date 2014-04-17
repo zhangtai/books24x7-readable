@@ -5,7 +5,6 @@
 // @author	Zhang Tai
 // @version	1.2
 // @require jquery.js
-// @resource bootstrap bootstrp.css
 // @include	http://www.books24x7.com/assetviewer.aspx*
 // ==/UserScript==
 
@@ -13,6 +12,8 @@ $(document).ready(function(){
     
     progressRaw = $(".b24-chunknavigate img[title]").attr("title");
     progressDig = $(".b24-chunknavigate img[title]").attr("title").match(/\d+/g);
+    bookTitle = $("div#FullText2 span").contents().text();
+
     
     (function(font) {
 	var	head = document.getElementsByTagName('head')[0],
@@ -21,7 +22,7 @@ $(document).ready(function(){
 		rules = document.createTextNode('#ctl00_ContentPlaceHolder1_ContentPanel * { font-family: "' + font.family + '", arial, sans-serif !important }');
 
     link.rel  = 'stylesheet';
-	link.href = 'http://fonts.googleapis.com/css?family=' + font.family + ':' + (font.style || []) + '&subset=' + (font.subset || ['latin']);
+	link.href = '//fonts.googleapis.com/css?family=' + font.family + ':' + (font.style || []) + '&subset=' + (font.subset || ['latin']);
 	head.appendChild(link);
 	
 	style.styleSheet ? style.styleSheet.cssText = rules.nodeValue : style.appendChild(rules);
@@ -31,12 +32,39 @@ $(document).ready(function(){
 
 
   
-$( "#ctl00_ContentPlaceHolder1_TopProgressControl_PreviousSection" ).attr( "src", "http://icons.iconarchive.com/icons/visualpharm/ios7v2/32/Arrows-Back-icon.png" );
-$( "#ctl00_ContentPlaceHolder1_TopProgressControl_NextSection" ).attr( "src", "http://icons.iconarchive.com/icons/visualpharm/ios7v2/32/Arrows-Forward-icon.png" );
+$( "#ctl00_ContentPlaceHolder1_TopProgressControl_PreviousSection" ).attr( "src", "//icons.iconarchive.com/icons/visualpharm/ios7v2/32/Arrows-Back-icon.png" );
+$( "#ctl00_ContentPlaceHolder1_TopProgressControl_NextSection" ).attr( "src", "//icons.iconarchive.com/icons/visualpharm/ios7v2/32/Arrows-Forward-icon.png" );
     
-$( "#FullText1" ).before( "<a href='http://www.books24x7.com/bookshelf.asp'><img src='http://png-1.findicons.com/files/icons/1580/devine_icons_part_2/24/home.png' /></a>" );
-$( "#UnattachedAnnotationsHere" ).after("<div class='progress'><div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: " + progressDig + "%;'>" + progressRaw + "</div></div>");
+$( "#FullText1" ).before( "<a href='http://www.books24x7.com/bookshelf.asp'><img src='//png-1.findicons.com/files/icons/1580/devine_icons_part_2/24/home.png' /></a>" );
+$( "#UnattachedAnnotationsHere" ).after("<div class='progress'><div id='progress-bar' class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: " + progressDig + "%;'>" + progressRaw + "</div></div>");
+$( "#FullText1" ).before('<a href="#" id="goodreadProgress" title"Find in Goodread" alt"Goodread"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAARVBMVEUAAACkiHGkiHGkiHGkiHGkiHGkiHGkiHGpj3jt7N7k3tDy8uXGt6TQxLPVy7q4o46znIeulYDLvavBsJ3f2Mjp5de8qZVgnfm3AAAAB3RSTlMAYNAQ8LDAThnSHAAAAHhJREFUeF5lz0mugzAAA9AkQF4GZvr%2F%2FY9aobKoVC%2Ffxna4EyeYYvhkSABpuGEYsZ1z2RhvSVjqsrSOFELE0XfmDjFkzA2lQw5wvqCDAFfF9gWlro72BfZX%2F7seyCgb9gr5qZ2VtkL8DPtvva4F6ZkOMA6%2F537uvwGpugbVLOx6dAAAAABJRU5ErkJggg%3D%3D" /></a>');
     
+$( "#leftHandNavToggle" ).click(function() {
+  $( "#MenuTD" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+  $( "#ctl00_ContentPlaceHolder1_AssetMetaControl_bookseparator" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+  $( "#ctl00_ContentPlaceHolder1_AssetMetaUpdatePanel" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+});
     
-    
+$( ".progress" ).click(function() {
+  $( "#MenuTD" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+  $( "#ctl00_ContentPlaceHolder1_AssetMetaControl_bookseparator" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+  $( "#ctl00_ContentPlaceHolder1_AssetMetaUpdatePanel" ).toggle( "slow", function() {
+    // Animation complete.
+  });
+});
+
+    $( "#goodreadProgress" ).click(function(){
+        window.open('https://www.goodreads.com/search?utf8=✓&query=' + bookTitle );
+    });
+                                   
 });
