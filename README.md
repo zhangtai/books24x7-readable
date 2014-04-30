@@ -3,9 +3,15 @@
 Make books24x7.com much readable.
 Please install Tampermonkey/Greasemonkey and Stylish first.
 
+* Preload for the secions of current chapter
 * Fonts change
-* Progress bar
+* Progress bar/indicator
 * Full screen reading (by clicking the progress bar to hide sidebar)
-* Link to Goodreads
 
-  ![reading](http://s3.amazonaws.com/uso_ss/26045/large.PNG?1397646025)
+
+The original ugly books24x7
+  ![old](http://images.snapnote.io/0p/V6/Fi.png)
+  
+  
+Plugin enabled:
+  ![new1]()
