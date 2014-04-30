@@ -14,4 +14,5 @@ The original ugly books24x7
   
   
 Plugin enabled:
-  ![new1]()
+  ![new1](http://images.snapnote.io/09/6x/yN.png)
+  ![new2](http://images.snapnote.io/0d/MR/R7.png)
