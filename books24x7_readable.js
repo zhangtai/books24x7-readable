@@ -5,7 +5,7 @@
 // @author	Zhang Tai
 // @version	1.3
 // @require jquery.js
-// @include	http://www.books24x7.com/assetviewer.aspx*
+// @include	http://*.books24x7.com/assetviewer.aspx*
 // ==/UserScript==
 
 $(document).ready(function(){
