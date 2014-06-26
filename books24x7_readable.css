@@ -559,12 +559,12 @@ table#HeaderTable, #footerAsset, tr[height="11"], .blueline {
     font-size: 2.5em !important;
 }
 
-tt {
-  font-size: 0.9em !important;
+#ctl00_ContentPlaceHolder1_ContentPanel tt {
+  font-size: 2.9em !important;
   color: rgb(62, 144, 148) !important;
 }
 
-pre {
+#ctl00_ContentPlaceHolder1_ContentPanel pre {
   font-size: 1.5em !important;
 }
 /*
