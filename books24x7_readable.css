@@ -565,7 +565,8 @@ table#HeaderTable, #footerAsset, tr[height="11"], .blueline {
 }
 
 #ctl00_ContentPlaceHolder1_ContentPanel pre {
-  font-size: 1.5em !important;
+  font-size: 1.2em !important;
+  color: rgb(62, 144, 148) !important;
 }
 /*
 span.figuremediaobject>img {
