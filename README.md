@@ -9,7 +9,7 @@ Please install Tampermonkey/Greasemonkey and Stylish first.
 * Full screen reading (by clicking the progress bar to hide sidebar)
 
 
-The original ugly books24x7
+The original books24x7
   ![old](http://images.snapnote.io/0p/V6/Fi.png)
   
   
